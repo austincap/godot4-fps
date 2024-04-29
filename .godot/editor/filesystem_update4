@@ -1,0 +1,6 @@
+res://Player_Controller/world_environment.tres
+res://Example World/Objects/World/boxxy.tscn
+res://Example World/Objects/World/world.tscn
+res://Player_Controller/player_character.tscn
+res://Example World/Objects/World/box_1.tscn
+res://Example World/Scripts/physic_objects/targetable_objects.gd

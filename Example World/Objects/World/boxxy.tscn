@@ -1,0 +1,21 @@
+[gd_scene load_steps=6 format=3 uid="uid://imn7c3maopi0"]
+
+[ext_resource type="Script" path="res://Example World/Scripts/physic_objects/targetable_objects.gd" id="1_v25ng"]
+[ext_resource type="Texture2D" uid="uid://dxsynf14s3j6x" path="res://Example World/Models/Boxes/cardboard_box1_Box_21-256x256.png" id="2_h370c"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_6snsf"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_6j7x2"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0gthi"]
+albedo_texture = ExtResource("2_h370c")
+
+[node name="boxxycollider" type="RigidBody3D" groups=["Target"]]
+script = ExtResource("1_v25ng")
+
+[node name="boxxyshape" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_6snsf")
+
+[node name="boxxymesh" type="CSGMesh3D" parent="boxxyshape"]
+mesh = SubResource("BoxMesh_6j7x2")
+material = SubResource("StandardMaterial3D_0gthi")
